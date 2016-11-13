@@ -6,11 +6,7 @@ import sendLoveMessage from './lib/send-love-message'
 import getRequiredKey from './lib/get-required-key'
 import loggerFactory from './lib/logger'
 
-const isDevelopment = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development')
-
-if (isDevelopment) {
-  dotenv.load()
-}
+dotenv.load()
 
 const requiredKeys = [
   'ELKS_API_PASSWORD',
